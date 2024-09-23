@@ -1,0 +1,28 @@
+//Homework-1
+
+#include <iostream> 
+
+using namespace std; 
+
+int main() {
+    int number; 
+    cout << "Enter an integer number: " << endl; 
+    cin >> number; 
+
+    int binaryofInt[32]; 
+    int length = 0; 
+
+    while(number > 0) {
+        binaryofInt[length] = number % 2; 
+        number /= 2; 
+        length++; 
+    }
+    
+    cout << "The Binary number is: " << endl; 
+    for(int i = length -1; i >= 0; i--){
+        cout << binaryofInt[i]; 
+    }
+    cout << endl; 
+
+    return 0; 
+}
